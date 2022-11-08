@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --purple-color: #7566ac;
+  --purple-text-color: #645590;
+  --muted-color: #666;
+  --font-color: #555;
+}
+
+body {
+  font-family: Bitter, system-ui, sans-serif;
+  margin-top: 2em;
+  font-size: 18px;
+  line-height: 1.7em;
+  color: var(--font-color);
+}
+
+h1 { font-size: 18px; font-weight: bold; margin-bottom: 2em;}
+
+a, a:visited, a:active {
+  color: var(--purple-text-color);
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: dashed 2px var(--purple-text-color);
+  padding-bottom: 2px;
+}
+
+.purple {
+  color: var(--purple-text-color)
+}
+
+.header {
+  border-bottom: solid 1em var(--purple-color) ;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: var(--muted-color);
+}
+
+.main p {
+  margin-bottom: 2em;
+}
+
+.portfolio img {
+  margin-bottom: 2em;
+  width: 150px;
+}
+.footer {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  color: var(--muted-color);
+  border-top: solid 1em var(--purple-color);
+  text-align: center;
+}
+
+p.contact {
+  margin-bottom: 0.5em;
+}
+p.contact img {
+  width: 200px;
+}
