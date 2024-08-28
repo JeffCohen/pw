@@ -11,6 +11,13 @@
 .highlighter {
   background-color: rgba(255, 255, 0, 0.3)
 }
+
+.sidebar {
+  background-color: #F3F3F3;
+  padding: 18px;
+  box-shadow: 4px 4px 4px #AAA;
+  border: solid 1px #CCC;
+}
 body {
   font-family: Bitter, system-ui, sans-serif;
   margin-top: 2em;
