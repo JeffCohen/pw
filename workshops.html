@@ -23,11 +23,21 @@
       </div>
     </div>
 
-    <div class="row justify-content-around">
-      <div class="col-sm-6">
-        <h1 class="fs-1 mb-2">Workshops</h1>
+    <div class="row ms-5">
+      <div class="col-sm-12">
+        <h1 class="fs-1 mb-2">Workshops for Junior Developers</h1>
         <p>Questions?  Email me and I'll reply within a day: <code class="text-black ms-2"> jeff@purpleworkshops.com</code></p>
-        <div class="border-top border-3 pt-3">
+        <div class="d-flex gap-4">
+          <a href="#office">Office Hours</a> 
+          <a href="#rails">Ruby on Rails Fundamentals</a> 
+          <a href="#react">React Fundamentals</a> 
+          <a href="#cs">Computer Science: The Good Parts</a>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around mt-4">
+      <div class="col-sm-6">
+        <div class="border-top border-3 pt-3" id="office">
           <h3>Office Hours</h3>
           <p class="mb-2 highlighter">Available most Friday mornings.</p>
           <p>
@@ -50,7 +60,7 @@
           <p>Simply email me a brief description of your question, topic, or problem. I'll let you know if an office hours session would be appropriate.</p>
         </div>
 
-        <div class="border-top border-3 pt-3 mt-5">
+        <div class="border-top border-3 pt-3 mt-5" id="rails">
           <h3>Ruby and Rails Fundamentals</h3>
           <p class="mb-2 highlighter">Monday, Oct 28 - Thursday, Oct 31.  9:00am CT - 4pm CT, with breaks.</p>
           <p>
@@ -58,7 +68,7 @@
           </p>
           <form name="rails" netlify class="shadow p-2 border mb-4 mx-0" netlify-honeypot="rails-bot-field">
             <input name="rails-bot-field" class="d-none">
-            <p class="fs-5 fw-normal"><b>Signup for Rails</b></p>
+            <p class="fs-5 fw-normal purple"><b>Signup for Rails</b></p>
             <p>
               <label>Your Email: <input type="email" name="email" class="form-control"/></label>
               <button type="submit" class="ms-4 btn btn-primary">Register</button>
@@ -81,7 +91,7 @@
           </p>
         </div>
 
-        <div class="border-top border-3 pt-3 mt-5">
+        <div class="border-top border-3 pt-3 mt-5" id="react">
           <h3>React Fundamentals</h3>
           <p class="mb-2 highlighter">First three Mondays in November:  Nov 4, 11, 18 at 9:00am CT - 4pm CT, with breaks.</p>
           <p>
@@ -89,7 +99,7 @@
           </p>
           <form name="react" netlify class="shadow p-2 border mb-4 mx-0"   netlify-honeypot="react-bot-field">
             <input name="react-bot-field" class="d-none">
-            <p class="fs-5 fw-normal"><b>Signup for React</b></p>
+            <p class="fs-5 fw-normal purple"><b>Signup for React</b></p>
             <p>
               <label>Your Email: <input type="email" name="email" class="form-control"/></label>
               <button type="submit" class="ms-4 btn btn-primary">Register Now</button>
@@ -115,6 +125,35 @@
           </p>
         </div>
 
+        <div class="border-top border-3 pt-3 mt-5" id="cs">
+          <h3>Computer Science: The Good Parts</h3>
+          <p class="mb-2 highlighter">Monday, Dec 9 - Thursday, Dec 11.  9:00am CT - 12pm CT each day.</p>
+          <p>
+            <i><b>$150</b> Live online small group, focused on helping beginners understand the basics of computer science for practical applications.</i>
+          </p>
+          <form name="cs" netlify class="shadow p-2 border mb-4 mx-0" netlify-honeypot="rails-bot-field">
+            <input name="rails-bot-field" class="d-none">
+            <p class="fs-5 fw-normal purple"><b>Signup for Computer Science: The Good Parts</b></p>
+            <p>
+              <label>Your Email: <input type="email" name="email" class="form-control"/></label>
+              <button type="submit" class="ms-4 btn btn-primary">Register</button>
+            </p>
+            <p><small><i>You'll be charged before the workshops begins.  100% refund if you're unhappy with the workshop.</small></i></p>
+          </form>
+          <p class="mb-2">Computer science can be an intimidating topic to learn on your own. These beginner-focused sessions 
+            start from the beginning and provide a friendly, eye-opening view into some of the best aspects of computer science.
+            We cover the most practical areas, useful for interview preparation and real-world applications.
+          </p>
+          <p class="mb-2">
+          The exact syllabus is customized for each groupbut generally topics include
+            classic data structures (lists, trees, and graphs), algorithmic thinking, and recursion.
+            We also get an inside look at computer memory, call stacks, garbage collection theory, 
+            "Big O" notation, and the best introduction to cryptography for beginners you'll ever encounter
+            to truly demystify practical things like SSL/TLS and public-private keys.  If time 
+            allows, we'll also cover the shell, remote shells, and how to start your own server on a hosting service
+            like AWS or Digital Ocean.
+          </p>
+        </div>
 
       </div>
       
