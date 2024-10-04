@@ -38,6 +38,10 @@ a:hover {
   background-color: var(--purple-color);
 }
 
+a:hover img {
+  background-color: white;
+}
+
 .purple {
   color: var(--purple-text-color)
 }
