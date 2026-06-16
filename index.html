@@ -2,61 +2,187 @@
 <html lang="en">
 
 <head>
-  <title>Purple Workshops</title>
+  <title>Jeffrey Cohen &middot; Purple Workshops</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Jeffrey Cohen — building The Aha Map, leading Software for Research, teaching at the University of Chicago, and running Purple Workshops.">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#7566ac',
+              text: '#645590',
+              dark: '#574a82',
+              light: '#f3f1f8',
+              soft: '#b3a6e0',
+            },
+          },
+          fontFamily: {
+            serif: ['Bitter', 'Georgia', 'serif'],
+            sans: ['"Open Sans"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.usefathom.com/script.js" data-site="HDZTXTNE" defer></script>
 </head>
 
-<body>
-  <div class="container-fluid">
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased">
 
-    <div class="row header justify-content-around align-items-center">
-      <div class="col-sm-4">
-        <a href="/"><img src="logo_big.png" class="mb-4 img-fluid" alt="Purple Workshops Logo"></a>
-      </div>
-      <div class="col-sm-4">
-        <a href="https://www.softwareforresearch.com"><img src="sfrlogo.png" class="mb-4 img-fluid" alt="Software for Research Logo"></a>
-      </div>
-    </div>
+  <main class="mx-auto max-w-5xl px-6">
 
-    <div class="row">
-      <div class="col text-center">
-        <h1> Hi, my name is Jeffrey Cohen, owner of Purple Workshops and Software for Research.</h1>
-        <p>
-          <i>Purple Workshops</i> are beginner-focused training seminars and workshops for programmers.
-          They are the best workshops for early-career developers on the planet.
-          <a href="workshops.html">See the list of current and upcoming workshops here.</a>
+    <!-- Header / hero -->
+    <header class="border-t-[16px] border-brand pt-10 sm:pt-14">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <h1 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight order-2 sm:order-1">
+          Hi, I'm Jeffrey Cohen.
+        </h1>
+        <a href="/" class="shrink-0 self-end sm:self-auto order-1 sm:order-2">
+          <img src="logo_big.png" alt="Purple Workshops" class="h-8 sm:h-9 w-auto">
+        </a>
+      </div>
+      <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-400 mt-4 max-w-2xl leading-relaxed">
+        I build software, teach, and run beginner-focused workshops for programmers.
+        Here's what I'm working on right now.
+      </p>
+    </header>
+
+    <!-- NOW: the two co-stars -->
+    <section class="mt-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 dark:text-slate-500">Now</p>
+
+      <div class="grid gap-6 sm:grid-cols-3 mt-4">
+
+        <!-- The Aha Map (featured, spans two columns) -->
+        <a href="https://www.theahamap.com"
+           class="group sm:col-span-2 flex flex-col rounded-2xl border border-brand/30 bg-brand-light dark:border-brand/40 dark:bg-brand/10 p-8 sm:p-10 transition
+                  hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+          <span class="inline-flex items-center gap-2 self-start rounded-full bg-brand px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+            <span class="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
+            Work in progress
+          </span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-4">
+            The Aha Map
+          </h2>
+          <p class="text-slate-600 dark:text-slate-300 mt-3 max-w-xl leading-relaxed flex-1">
+            My current work-in-progress. Come take an early look.
+          </p>
+          <span class="inline-flex items-center gap-1 text-brand-text dark:text-brand-soft font-semibold mt-6 group-hover:gap-2 transition-all">
+            theahamap.com
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </span>
+        </a>
+
+        <!-- Current workshop (co-star) -->
+        <a href="workshops.html"
+           class="group flex flex-col rounded-2xl border-2 border-brand/40 bg-white dark:border-brand/50 dark:bg-slate-900 p-6 transition
+                  hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+          <span class="inline-flex items-center gap-2 self-start rounded-full bg-brand-light text-brand-text dark:bg-brand/20 dark:text-brand-soft px-3 py-1 text-xs font-semibold uppercase tracking-wide">
+            New workshop &middot; 2027
+          </span>
+          <h2 class="font-serif text-xl font-bold text-slate-900 dark:text-white mt-4">
+            Modern Rails Deployment for Beginners
+          </h2>
+          <ul class="text-sm text-slate-600 dark:text-slate-400 mt-3 space-y-1 flex-1">
+            <li>In person &middot; Jan 2027 &middot; Denver</li>
+            <li>Virtual online &middot; Feb 2027</li>
+            <li class="text-slate-800 dark:text-slate-200 font-semibold">$199 &middot; 2 days</li>
+          </ul>
+          <span class="inline-flex items-center gap-1 text-brand-text dark:text-brand-soft font-semibold text-sm mt-5 group-hover:gap-2 transition-all">
+            Details &amp; waitlist
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ALSO: day job, teaching, full workshop catalog -->
+    <section class="mt-6 grid gap-6 sm:grid-cols-3">
+
+      <!-- Software for Research -->
+      <a href="https://www.softwareforresearch.com"
+         class="group flex flex-col rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6 transition
+                hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+        <span class="block w-4/5 rounded-md overflow-hidden">
+          <img src="sfrlogo.png" alt="Software for Research" class="w-full h-auto dark:hidden">
+          <img src="sfrlogo-dark.png" alt="Software for Research" class="w-full h-auto hidden dark:block">
+        </span>
+        <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mt-4">Software for Research</h3>
+        <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed flex-1">
+          My software company. We build software for clinical and behavioral science research
+          at academic institutions.
         </p>
-        <p>
-          <i>Software for Research</i> represents my team that specializes in building software for clinical research in the behavioral sciences
-          at academic institutions.  You can learn more about our platform for behavioral science research at 
-          <a href="https://www.softwareforresearch.com">https://www.softwareforresearch.com</a>.
-        </p>
-        <p>
-          I am also an <a href="https://masters.cs.uchicago.edu/page/jeff-cohen">
-          Adjunct Assistant Professor at the University of Chicago</a>, teaching courses in web development and applied
-          software engineering.
-        </p>
-      </div>
+        <span class="inline-flex items-center gap-1 text-brand-text dark:text-brand-soft font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
+          softwareforresearch.com
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </a>
 
-      <div class="col-sm-3 text-center">
-        <p class="contact"><img class="rounded shadow" alt="Photo of Jeffrey Cohen" src="me.jpg"></p>
-        <p class="contact">Email: <a href="mailto:jeff@purpleworkshops.com">jeff@purpleworkshops.com</a></p>
-        <p class="contact">LinkedIn: <a href="https://linkedin.com/in/codeteacher">Profile</a> </p>
-        <p class="contact">Twitter: <a href="https://twitter.com/jeffcohen">@jeffcohen</a> </p>
-      </div>
-    </div>
+      <!-- UChicago -->
+      <a href="https://cs.uchicago.edu/people/jeffrey-l-cohen/"
+         class="group flex flex-col rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6 transition
+                hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+        <img src="uchicago-maroon.png" alt="The University of Chicago" class="h-14 w-auto self-start dark:hidden">
+        <img src="uchicago-greystone.png" alt="The University of Chicago" class="h-14 w-auto self-start hidden dark:block">
+        <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mt-4">University of Chicago</h3>
+        <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed flex-1">
+          My part-time work. I teach web development and applied software engineering
+          in the Department of Computer Science.
+        </p>
+        <span class="inline-flex items-center gap-1 text-brand-text dark:text-brand-soft font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
+          Faculty profile
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </a>
 
-    <div class="row footer">
-      <div class="col-sm-12 ml-4">
-        <p>&copy;2008-2024 Purple Workshops, LLC.  Chicago, IL.  All rights reserved.</p>
+      <!-- Beginner-Focused Workshops (full catalog) -->
+      <a href="workshops.html"
+         class="group flex flex-col rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6 transition
+                hover:border-brand hover:shadow-lg hover:shadow-brand/10">
+        <span class="text-2xl" aria-hidden="true">💜</span>
+        <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mt-4">Beginner-Focused Workshops</h3>
+        <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed flex-1">
+          Small-group training for early-career developers. Browse the full Purple Workshops catalog,
+          past and upcoming.
+        </p>
+        <span class="inline-flex items-center gap-1 text-brand-text dark:text-brand-soft font-semibold text-sm mt-4 group-hover:gap-2 transition-all">
+          See all workshops
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </span>
+      </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t-[16px] border-brand mt-16 py-8 text-sm text-slate-500 dark:text-slate-400">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <a href="mailto:jeff@purpleworkshops.com" class="hover:text-brand-text dark:hover:text-brand-soft">jeff@purpleworkshops.com</a>
+          <a href="https://linkedin.com/in/codeteacher" class="hover:text-brand-text dark:hover:text-brand-soft">LinkedIn: @codeteacher</a>
+          <a href="https://bsky.app/profile/jefflcohen.bsky.social" class="hover:text-brand-text dark:hover:text-brand-soft">bluesky: @jeffcohen</a>
+        </div>
+        <p>&copy; 2008&ndash;2026 Purple Workshops, LLC &middot; Chicago, IL</p>
       </div>
-    </div>
-  </div>
+    </footer>
+
+  </main>
 
 </body>
 
