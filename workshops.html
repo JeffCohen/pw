@@ -102,12 +102,12 @@
           </div>
         </dl>
 
-        <!-- Waitlist form (Netlify) -->
-        <form name="rails-deployment-waitlist" method="POST" data-netlify="true"
-              netlify-honeypot="bot-field" id="waitlist"
+        <!-- Waitlist form posts to Formspree (endpoint from the Formspree dashboard). -->
+        <form action="https://formspree.io/f/xeewbwno" method="POST" id="waitlist"
               class="mt-6 rounded-xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-700 p-5">
-          <input type="hidden" name="form-name" value="rails-deployment-waitlist">
-          <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <!-- Honeypot spam trap (Formspree ignores submissions where this is filled) -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden">
+          <input type="hidden" name="_subject" value="New Rails Deployment workshop waitlist signup">
           <label for="waitlist-email" class="block font-serif font-semibold text-slate-900 dark:text-white">
             Join the waitlist
           </label>
