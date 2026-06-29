@@ -17,29 +17,7 @@
       } catch (e) {}
     })();
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              DEFAULT: '#7566ac',
-              text: '#645590',
-              dark: '#574a82',
-              light: '#f3f1f8',
-              soft: '#b3a6e0',
-            },
-          },
-          fontFamily: {
-            serif: ['Bitter', 'Georgia', 'serif'],
-            sans: ['"Open Sans"', 'system-ui', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="tailwind.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.usefathom.com/script.js" data-site="HDZTXTNE" defer></script>
   <script src="theme.js" defer></script>
@@ -47,7 +25,7 @@
 
 <body class="mt-4 bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-300 font-sans antialiased">
 
-  <main class="mx-auto max-w-4xl px-6">
+  <main class="mx-auto max-w-6xl px-6">
 
     <!-- Header -->
     <header class="border-t-[64px] border-brand pt-10 sm:pt-14">
@@ -76,10 +54,18 @@
         <h2 class="font-serif text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-4">
           Modern Rails Deployment for Beginners
         </h2>
-        <p class="text-slate-600 dark:text-slate-300 mt-3 max-w-2xl leading-relaxed">
+        <p class="text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
           A hands-on, two-day workshop that demystifies shipping a Ruby on Rails app to production
-          using today's tooling. Full description and registration details coming soon &mdash; add your
-          email below and you'll be the first to know when dates and signups open.
+          using today's tooling. Full description and registration details coming soon &mdash;
+          <a href="#waitlist" class="text-brand-text dark:text-brand-soft font-semibold hover:underline">add your
+          email below</a> and you'll be the first to know when dates and signups open.
+        </p>
+        <p class="text-slate-600 dark:text-slate-300 mt-4 leading-relaxed">
+          You'll learn how to deploy your own Rails app to a virtual machine on Digital Ocean, step by
+          step, demystifying the cloud so you will really understand it. Everything we cover is applicable
+          to other hosts such as AWS. Digital Ocean provides an easier on-ramp and a nicer learning path
+          than the AWS ecosystem. Expect to use a credit card and pay around $10 for Digital Ocean
+          hosting during the class.
         </p>
 
         <!-- Quick facts -->
@@ -102,6 +88,35 @@
           </div>
         </dl>
 
+        <!-- Agenda -->
+        <h3 class="font-serif text-lg font-bold text-slate-900 dark:text-white mt-8">What we'll cover</h3>
+        <div class="grid gap-4 sm:grid-cols-2 mt-3">
+          <div class="rounded-xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-700 p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-text dark:text-brand-soft">Day 1</p>
+            <ul class="mt-3 space-y-2 text-base text-slate-600 dark:text-slate-300">
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>What does "deployment" really mean?</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>All about servers and hosts</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Understanding how networks work</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>The classical web stack</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>The secrets of proper Rails deployment</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Acquiring and setting up a virtual host</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Deploying a Rails app to the cloud</li>
+            </ul>
+          </div>
+          <div class="rounded-xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-700 p-5">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-text dark:text-brand-soft">Day 2</p>
+            <ul class="mt-3 space-y-2 text-base text-slate-600 dark:text-slate-300">
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>How to set up logging and monitoring</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Hand-rolled automated deployment</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Intro to modern deployment</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>What are containers?</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>What is Docker all about?</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Deploying with Kamal</li>
+              <li class="flex gap-2"><span class="text-brand" aria-hidden="true">&bull;</span>Future deployment with AI</li>
+            </ul>
+          </div>
+        </div>
+
         <!-- Waitlist form posts to Formspree (endpoint from the Formspree dashboard). -->
         <form action="https://formspree.io/f/xeewbwno" method="POST" id="waitlist"
               class="mt-6 rounded-xl bg-white border border-slate-200 dark:bg-slate-900 dark:border-slate-700 p-5">
@@ -111,7 +126,7 @@
           <label for="waitlist-email" class="block font-serif font-semibold text-slate-900 dark:text-white">
             Join the waitlist
           </label>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">No charge to join. We'll only email you about this workshop.</p>
+          <p class="text-base text-slate-500 dark:text-slate-400 mt-1">Stay updated on news and announcements on all workshop details and openings. We never share your email with anyone and you can unsubscribe instantly anytime.</p>
           <div class="flex flex-col sm:flex-row gap-3 mt-3">
             <input id="waitlist-email" type="email" name="email" required placeholder="you@example.com"
                    class="flex-1 rounded-lg border border-slate-300 dark:border-slate-600 dark:bg-slate-800 dark:text-white px-4 py-2.5 text-slate-800
@@ -145,8 +160,8 @@
         <!-- Office Hours -->
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6">
           <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">Office Hours</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">One-on-one &middot; $30 per 45-min Zoom session</p>
-          <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm leading-relaxed">
+          <p class="text-base text-slate-500 dark:text-slate-400 mt-1">One-on-one &middot; $30 per 45-min Zoom session</p>
+          <p class="text-slate-600 dark:text-slate-400 mt-3 text-base leading-relaxed">
             A "professional lifeline" for early-career developers: stuck on a project, working through
             post-bootcamp material, or chasing a stubborn bug? We work together until it clears up.
           </p>
@@ -155,8 +170,8 @@
         <!-- Computer Science: The Good Parts -->
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6">
           <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">Computer Science: The Good Parts</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 4 mornings</p>
-          <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm leading-relaxed">
+          <p class="text-base text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 4 mornings</p>
+          <p class="text-slate-600 dark:text-slate-400 mt-3 text-base leading-relaxed">
             A friendly, eye-opening tour of the most practical computer science: data structures,
             algorithmic thinking, computer architecture, and the best beginner's introduction to
             cryptography you'll ever encounter.
@@ -166,8 +181,8 @@
         <!-- React Fundamentals -->
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6">
           <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">React Fundamentals</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 3 sessions</p>
-          <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm leading-relaxed">
+          <p class="text-base text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 3 sessions</p>
+          <p class="text-slate-600 dark:text-slate-400 mt-3 text-base leading-relaxed">
             Start with plain JavaScript and slowly morph it into a full React app. By avoiding the
             "magic," you'll see exactly why React works the way it does &mdash; and why other frameworks
             exist at all.
@@ -177,8 +192,8 @@
         <!-- Ruby and Rails Fundamentals -->
         <article class="rounded-2xl border border-slate-200 dark:border-slate-700 dark:bg-slate-900 p-6">
           <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white">Ruby &amp; Rails Fundamentals</h3>
-          <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 4 full days</p>
-          <p class="text-slate-600 dark:text-slate-400 mt-3 text-sm leading-relaxed">
+          <p class="text-base text-slate-500 dark:text-slate-400 mt-1">Live online small group &middot; 4 full days</p>
+          <p class="text-slate-600 dark:text-slate-400 mt-3 text-base leading-relaxed">
             A four-day deep dive that condenses a typical 10-week program by focusing on the parts
             beginners struggle with most: objects, routing, the full HTTP request-response cycle,
             controllers, and the model/database layer.
